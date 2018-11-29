@@ -96,7 +96,14 @@ for instance user form has FirstName & Last Name & History ,etc...
   }
 ]
 ```
+2.I need a componet to create user form
+in this form, you can inject your service.
 
+3.Next Step, you have to call form-builder and pass your form structure 
+
+4.In form-builder, it use a iteration to read your structure and per element, it call Decider.
+
+5.Decider, make a decision to bind your element base on element type
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
