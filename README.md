@@ -7,10 +7,11 @@ Angular version 6.2.5.
 ## Development server
 
 1-you need a service
-I use a mock generator (www.mocky.io) to publish api
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
+I use a mock generator (www.mocky.io) to publish My api
+For example In Services you see userManagement.service.ts
+it has a method that return user structure.
+for instance user form has FirstName & Last Name & History ,etc...
+ 
 ## sample
 ```
 [
