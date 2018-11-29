@@ -10,7 +10,9 @@ Angular version 6.2.5.
 I use a mock generator (www.mocky.io) to publish api
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-`[
+
+## sample
+[
   {
       "type": "text",
           "id":"userFirstNameId",
@@ -91,7 +93,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
     "required":""
   }
 ]
-`
+
 
 ## Code scaffolding
 
