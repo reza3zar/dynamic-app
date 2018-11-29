@@ -15,8 +15,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ```
 [
   {
-      "type": "text",
-          "id":"userFirstNameId",
+    "type": "text",
+    "id":"userFirstNameId",
     "name": "firstName",
     "label": "First Name",
     "placeholder":"Your FirstName",
@@ -29,7 +29,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
   },
       {
       "type": "text",
-          "id":"userLastNameId",
+    "id":"userLastNameId",
     "name": "lastName",
     "label": "Last Name",
     "placeholder":"Your LastName",
@@ -41,10 +41,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
   },
       {
       "type": "text",
-          "id":"userHistoryId",
+    "id":"userHistoryId",
     "name": "history",
     "label": "History of Your Account",
-    "placeholder":"History of Your Accoun ...",
+    "placeholder":"History of Your Account ...",
     "value": "",
     "order":3,
     "class":"col-lg-12",
@@ -95,10 +95,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
   }
 ]
 ```
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
