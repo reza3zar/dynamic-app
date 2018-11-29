@@ -22,7 +22,10 @@ import { CustomControl } from "../Common/control";
     <div class="alert alert-danger my-1 p-2 fadeInDown animated" *ngIf="!isValidContol && isDirtyContol && (controlValues.value?.length==0)">{{controlValues.label}} is required !!!</div>
     </div>
 
-
+    <div class="row col-md-12">
+    <div class="alert alert-danger my-1 p-2 fadeInDown animated" *ngIf="!isValidContol && isDirtyContol && (controlValues.value?.length<controlValues.minLengthValidation)">{{controlValues.label}} Min Lentgh is : {{controlValues.minLengthValidation}}!!!</div>
+    </div>
+    
   `
 })
 export class TextboxComponent implements OnInit {
