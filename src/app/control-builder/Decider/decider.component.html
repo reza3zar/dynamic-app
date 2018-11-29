@@ -1,0 +1,16 @@
+<div class="form-group row" [formGroup]="form">
+  <div class="col-md-12" [ngSwitch]="inputControl.type">
+  <div class="row col-md-12">
+  <label for="{{inputControl.name}}">{{inputControl.label}}</label>
+  <label *ngIf="inputControl.required==='required'"   style="color:red">*</label>
+  </div>
+    <textbox *ngSwitchCase="'text'"  [controlValues]="inputControl" [form]="form"></textbox>
+    <textareas *ngSwitchCase="'textareas'"  [controlValues]="inputControl" [form]="form"></textareas>
+    <money *ngSwitchCase="'money'"  [controlValues]="inputControl" [form]="form"></money>
+    <dropdown *ngSwitchCase="'dropdown'"  [controlValues]="inputControl" [form]="form"></dropdown>
+
+  </div>
+
+
+
+</div>

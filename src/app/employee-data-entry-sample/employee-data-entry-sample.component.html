@@ -1,0 +1,45 @@
+<div class="wrapper-wide" aria-hidden="true">
+    <br />
+    <div *ngIf="_collectionControls.length > 0 && pageIsload" class="container">
+      <div class="col-sm-12">
+        <div class="card border-success mb-3 bg-light">
+          <div class="card-header">Dynamic Forms Test </div>
+          <div class="card-body ">
+            <forms-builder
+              (onSubmitOccoured)="doWork($event)"
+              [controls]="_collectionControls"
+            ></forms-builder>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="wrapper-wide" aria-hidden="true"  *ngIf="pageIsload">
+    <br />
+    <div  class="container">
+      <div class="col-sm-12">
+        <div class="card border-success mb-3 bg-light">
+          <div class="card-header">Result Forms Test </div>
+          <div class="card-body ">
+            <pre>{{dataResult | json}}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" *ngIf="!pageIsload" >
+    <div class="card" >
+      <div class="shimmerBG media"></div>
+      <div class="p-32">
+
+        <div *ngFor="let item of generateFake(15)"  >
+          <div class="shimmerBG content-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
