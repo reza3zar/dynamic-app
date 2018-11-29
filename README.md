@@ -1,4 +1,4 @@
-# DynamicApp
+# DynamicApp (Easy Peasy)
 
 This project is a Dynamic Form Builder 
 
