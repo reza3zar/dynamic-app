@@ -18,7 +18,7 @@ export class EmployeeDataEntrySampleComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.usersService.getEmployeeCollection().subscribe(dataResult => {
-      this._collectionControls = dataResult.sort((a, b) => a.order - b.order);;
+      this._collectionControls = dataResult.sort((a, b) => a.order - b.order);
       this.pageIsload=true;
     });
   }
