@@ -7,10 +7,18 @@ import { DeciderComponent } from './Decider/decider.component';
 import { TextareaComponent } from '../Controls/textarea.component';
 import { MoneyComponent } from '../Controls/money.component';
 import { ComboBoxComponent } from '../Controls/combobox.component';
+import { DatePickerComponent } from 'src/app/Controls/datepicker.component';
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule.forRoot(),
+    NgbPaginationModule, 
+    NgbAlertModule
   ],
   declarations: [
     FormsBuilder,
@@ -19,6 +27,7 @@ import { ComboBoxComponent } from '../Controls/combobox.component';
     MoneyComponent,
     TextareaComponent,
     ComboBoxComponent,
+    DatePickerComponent
   ],
   exports:[
     FormsBuilder
