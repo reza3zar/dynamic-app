@@ -15,6 +15,7 @@ import { CustomControl } from "../Common/control";
         [placeholder]="controlValues.placeholder"
         [(ngModel)]="controlValues.value"
         [attr.required]="controlValues.required"
+        [pattern]="controlValues.pattern"
       />
     </div>
 
