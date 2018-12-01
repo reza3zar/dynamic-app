@@ -28,7 +28,7 @@ export class EmployeeDataEntrySampleComponent implements OnInit, OnDestroy {
 
   }
   public dataResult:string;
-  doWork(data):void{
+  saveData(data):void{
     this.dataResult=data;
     console.log(data);
   }
