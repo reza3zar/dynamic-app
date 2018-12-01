@@ -11,14 +11,16 @@ import { DatePickerComponent } from 'src/app/Controls/datepicker.component';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RadioButtonComponent } from '../Controls/radiobutton.component';
-
+import {NgxMaskModule} from 'ngx-mask'
+import { MaskTextboxComponent } from '../Controls/masktextbox.component';
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
     NgbModule.forRoot(),
     NgbPaginationModule,
-    NgbAlertModule
+    NgbAlertModule,
+    NgxMaskModule.forRoot()
   ],
   declarations: [
     FormsBuilder,
@@ -28,7 +30,8 @@ import { RadioButtonComponent } from '../Controls/radiobutton.component';
     TextareaComponent,
     ComboBoxComponent,
     DatePickerComponent,
-    RadioButtonComponent
+    RadioButtonComponent,
+    MaskTextboxComponent
   ],
   exports:[
     FormsBuilder
