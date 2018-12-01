@@ -6,12 +6,10 @@ import { EmployeeService } from '../Services/employee.service';
 
 @Component({
   selector: 'app-employee-data-entry-sample',
-  templateUrl: './employee-data-entry-sample.component.html',
-  styleUrls: ['./employee-data-entry-sample.component.css']
+  templateUrl: './employee-data-entry-sample.component.html'
 })
 export class EmployeeDataEntrySampleComponent implements OnInit, OnDestroy {
   public pageIsload:boolean=false;
-  public fakeLine:any[10];
   public form: FormGroup;
   constructor(private usersService: EmployeeService) { }
   public _collectionControls: CustomControl[] = [];
@@ -28,17 +26,11 @@ export class EmployeeDataEntrySampleComponent implements OnInit, OnDestroy {
 
   }
   public dataResult:string;
-  saveData(data):void{
+  saveDataEmployee(data):void{
     this.dataResult=data;
-    console.log(data);
+
   }
 
-  public generateFake(count: number): Array<number> {
-    const indexes = [];
-    for (let i = 0; i < count; i++) {
-      indexes.push(i);
-    }
-    return indexes;
-  }
+
 
 }

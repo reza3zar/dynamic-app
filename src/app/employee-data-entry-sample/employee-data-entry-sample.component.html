@@ -6,7 +6,7 @@
           <div class="card-header">Dynamic Forms Test </div>
           <div class="card-body ">
             <forms-builder
-              (onSubmitOccoured)="saveData($event)"
+              (onSubmitOccoured)="saveDataEmployee($event)"
               [controls]="_collectionControls"
             ></forms-builder>
           </div>
@@ -31,13 +31,5 @@
 
 
   <div class="container" *ngIf="!pageIsload" >
-    <div class="card" >
-      <div class="shimmerBG media"></div>
-      <div class="p-32">
-
-        <div *ngFor="let item of generateFake(15)"  >
-          <div class="shimmerBG content-line"></div>
-        </div>
-      </div>
-    </div>
+    <app-fake-loader></app-fake-loader>
   </div>

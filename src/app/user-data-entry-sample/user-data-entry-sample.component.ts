@@ -5,13 +5,11 @@ import { CustomControl } from '../Common/control';
 
 @Component({
   selector: 'app-user-data-entry-sample',
-  templateUrl: './user-data-entry-sample.component.html',
-  styleUrls: ['./user-data-entry-sample.component.css']
+  templateUrl: './user-data-entry-sample.component.html'
 })
 
 export class UserDataEntrySampleComponent implements OnInit, OnDestroy {
   public pageIsload:boolean=false;
-  public fakeLine:any[10];
   public form: FormGroup;
   constructor(private usersService: UserManagementService) { }
   public _collectionControls: CustomControl[] = [];
@@ -28,17 +26,10 @@ export class UserDataEntrySampleComponent implements OnInit, OnDestroy {
 
   }
   public dataResult:string;
-  doWork(data):void{
+  saveDataUser(data):void{
     this.dataResult=data;
-    console.log(data);
   }
 
-  public generateFake(count: number): Array<number> {
-    const indexes = [];
-    for (let i = 0; i < count; i++) {
-      indexes.push(i);
-    }
-    return indexes;
-  }
+
 
 }

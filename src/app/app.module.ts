@@ -10,12 +10,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserDataEntrySampleComponent } from './user-data-entry-sample/user-data-entry-sample.component';
 import { EmployeeDataEntrySampleComponent } from './employee-data-entry-sample/employee-data-entry-sample.component';
 import { EmployeeService } from './Services/employee.service';
+import { FakeLoaderComponent } from './fake-loader/fake-loader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent
-    ,UserDataEntrySampleComponent, EmployeeDataEntrySampleComponent
+    ,UserDataEntrySampleComponent, EmployeeDataEntrySampleComponent, FakeLoaderComponent
   ],
   imports: [
     BrowserModule

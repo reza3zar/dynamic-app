@@ -1,0 +1,68 @@
+body {
+  background: #f5f5f5;
+}
+
+/* .card {
+  position: relative;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FFF;
+  border-radius: 6px;
+  height: 500px;
+  overflow: hidden;
+  margin: 40px auto;
+} */
+.card .shimmerBG {
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: shimmer;
+          animation-name: shimmer;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  background: #E5F0FB;
+  background: linear-gradient(to right, #c1dceb 4%, #a3cbe1 25%, #c1dceb 36%);
+  background-size: 1200px 100%;
+}
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+.card .media {
+}
+.card .p-32 {
+  padding: 32px;
+}
+.card .title-line {
+  height: 24px;
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 20px;
+}
+.card .content-line {
+  height: 8px;
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+.card .end {
+  width: 40%;
+}
+
+.m-t-24 {
+  margin-top: 24px;
+}
