@@ -98,7 +98,7 @@ for instance user form has FirstName & Last Name & History ,etc...
 
       "value":"",
 
-      "order":8,
+      "order":9,
 
       "class":"col-lg-12",
 
@@ -120,7 +120,7 @@ for instance user form has FirstName & Last Name & History ,etc...
 
       "value":"",
 
-      "order":6,
+      "order":7,
 
       "class":"col-lg-12",
 
@@ -178,7 +178,7 @@ for instance user form has FirstName & Last Name & History ,etc...
 
       ],
 
-      "order":7,
+      "order":8,
 
       "class":"col-lg-12",
 
@@ -200,7 +200,7 @@ for instance user form has FirstName & Last Name & History ,etc...
 
       "value":"",
 
-      "order":4,
+      "order":5,
 
       "class":"col-lg-12",
 
@@ -222,7 +222,7 @@ for instance user form has FirstName & Last Name & History ,etc...
 
       "value":"",
 
-      "order":5,
+      "order":6,
 
       "class":"col-lg-12",
 
@@ -230,7 +230,49 @@ for instance user form has FirstName & Last Name & History ,etc...
 
       "required":""
 
+   },
+
+ {  
+
+      "type":"radio",
+
+      "id":"userGenderId",
+
+      "name":"Gender",
+
+      "label":"Your Gender : ",
+ 
+
+      "radiItems":[  
+
+         {  
+
+            "value":"0",
+
+            "name":"Male"
+
+         },
+
+         {  
+
+            "value":"1",
+
+            "name":"Female"
+
+         }
+
+  
+
+      ],
+
+      "order":4,
+
+      "class":"col-lg-12",
+
+      "required":""
+
    }
+
 
 ]
 ```
