@@ -10,5 +10,6 @@ export class CustomControl{
   public required?:string='';
   public minLengthValidation?:number;
   public order?:number;
-  public items?:DropdownItem[]
+  public items?:DropdownItem[];
+  public pattern?:string;
 }
