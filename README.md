@@ -234,7 +234,7 @@ for instance user form has FirstName & Last Name & History ,etc...
 
 ]
 ```
-2.I need a componet to create user form
+2.you need a componet to create "User Form Management"
 in this form, you can inject your service.
 
 3.Next Step, you have to call form-builder and pass your form structure 

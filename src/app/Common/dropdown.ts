@@ -1,4 +1,4 @@
-export class DropdownItem{
+export class Item{
   public value?:string;
   public name?:string;
 }

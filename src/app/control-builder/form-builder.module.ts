@@ -10,14 +10,14 @@ import { ComboBoxComponent } from '../Controls/combobox.component';
 import { DatePickerComponent } from 'src/app/Controls/datepicker.component';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { RadioButtonComponent } from '../Controls/radiobutton.component';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
     NgbModule.forRoot(),
-    NgbPaginationModule, 
+    NgbPaginationModule,
     NgbAlertModule
   ],
   declarations: [
@@ -27,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     MoneyComponent,
     TextareaComponent,
     ComboBoxComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    RadioButtonComponent
   ],
   exports:[
     FormsBuilder

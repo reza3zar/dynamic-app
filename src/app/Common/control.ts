@@ -1,4 +1,4 @@
-import { DropdownItem } from './dropdown';
+import { Item } from './dropdown';
 export class CustomControl{
   public id?:string;
   public label?:string;
@@ -11,6 +11,8 @@ export class CustomControl{
   public minLengthValidation?:number;
 
   public order?:number;
-  public items?:DropdownItem[];
+  public items?:Item[];
+  public radiItems?:Item[];
+
   public pattern?:string;
 }
