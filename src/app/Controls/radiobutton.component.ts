@@ -7,7 +7,7 @@ import { CustomControl } from "../Common/control";
   template: `
   <div [formGroup]="form">
   <div  *ngFor="let item of controlValues.radiItems" class="form-check">
-    <input class="form-check-input" [attr.type]="controlValues.type" [value]="item.value" >
+    <input class="form-check-input"    [name]="controlValues.name"   [id]="controlValues.name" [attr.type]="controlValues.type"  [formControlName]="controlValues.name" [value]="item.value" >
     <label class="form-check-label">
       {{item.name}}
     </label>
@@ -31,7 +31,6 @@ export class RadioButtonComponent implements OnInit {
   }
 
   ngOnInit() {
-
 
   }
 }
