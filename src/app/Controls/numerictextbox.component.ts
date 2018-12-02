@@ -3,22 +3,29 @@ import { FormGroup } from "@angular/forms";
 import { CustomControl } from "../Common/control";
 
 @Component({
-  selector: "masktextbox",
+  selector: "number",
   template: `
     <div [formGroup]="form">
-    <input class="form-control" type='text' [prefix]="controlValues?.maskText?.prefix " [sufix]="controlValues?.maskText?.sufix " [mask]="controlValues?.maskText?.mask"
-    [id]="controlValues.id"
-        [name]="controlValues.id"
+      <input
+        [attr.type]="controlValues.type"
+        class="form-control"
+        [id]="controlValues.id"
+        [name]="controlValues.name"
         [formControlName]="controlValues.name"
         [placeholder]="controlValues.placeholder"
         [(ngModel)]="controlValues.value"
         [attr.required]="controlValues.required"
-    >
+        [pattern]="controlValues.pattern"
+        numbersOnly
+      />
     </div>
 
+    <div class="row col-md-12">
+    <div class="alert alert-danger my-1 p-2 fadeInDown animated" *ngIf="!isValidContol && isDirtyContol && (controlValues.value?.length==0)">{{controlValues.label}} is required !!!</div>
+    </div>
   `
 })
-export class MaskTextboxComponent implements OnInit {
+export class NumericTextboxComponent implements OnInit {
   @Input() form: FormGroup;
   @Input() controlValues: CustomControl = {};
   constructor() {}

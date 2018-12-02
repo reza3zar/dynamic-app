@@ -1,6 +1,6 @@
 # DynamicApp (Easy Peasy)
 
-This project is a Dynamic Form Builder 
+Dynamic Angular Apps.
 
 Angular version 6.2.5.
 

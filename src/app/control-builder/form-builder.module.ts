@@ -13,6 +13,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RadioButtonComponent } from '../Controls/radiobutton.component';
 import {NgxMaskModule} from 'ngx-mask'
 import { MaskTextboxComponent } from '../Controls/masktextbox.component';
+import { NumericTextboxComponent } from '../Controls/numerictextbox.component';
+import { NumberDirective } from './numbersOnly.directive';
 @NgModule({
   imports: [
     CommonModule,
@@ -31,7 +33,9 @@ import { MaskTextboxComponent } from '../Controls/masktextbox.component';
     ComboBoxComponent,
     DatePickerComponent,
     RadioButtonComponent,
-    MaskTextboxComponent
+    MaskTextboxComponent,
+    NumericTextboxComponent,
+    NumberDirective
   ],
   exports:[
     FormsBuilder

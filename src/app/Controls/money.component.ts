@@ -10,7 +10,7 @@ import { CustomControl } from "../Common/control";
       <input
         [attr.type]="controlValues.type"
         class="form-control"
-        [id]="controlValues.name"
+        [id]="controlValues.id"
         [name]="controlValues.name"
         [formControlName]="controlValues.name"
         [placeholder]="controlValues.placeholder"

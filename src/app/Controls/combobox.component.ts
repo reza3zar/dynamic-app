@@ -6,7 +6,7 @@ import { CustomControl } from "../Common/control";
   selector: "dropdown",
   template: `
   <div [formGroup]="form">
-        <select class="form-control" [id]="controlValues.name" [formControlName]="controlValues.name">
+        <select class="form-control" [id]="controlValues.id" [formControlName]="controlValues.name">
           <option *ngFor="let comboItem of controlValues.items" [value]="comboItem.value">{{comboItem.name}}</option>
         </select>
       </div>
