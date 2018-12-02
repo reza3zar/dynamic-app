@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { FormGroup } from "@angular/forms";
 import { CustomControl } from "../Common/control";
 
@@ -16,7 +16,9 @@ import { CustomControl } from "../Common/control";
         [(ngModel)]="controlValues.value"
         [attr.required]="controlValues.required"
         [pattern]="controlValues.pattern"
-      />
+        (blur)="onBlur($event)"
+        (change)="onChange($event)"
+        (focus)="onFocus($event)"/>
     </div>
 
     <div class="row col-md-12">
@@ -32,6 +34,9 @@ import { CustomControl } from "../Common/control";
 export class TextboxComponent implements OnInit {
   @Input() form: FormGroup;
   @Input() controlValues: CustomControl = {};
+  @Output() blur: EventEmitter<any> = new EventEmitter();
+  @Output() change: EventEmitter<any> = new EventEmitter();
+  @Output() focus: EventEmitter<any> = new EventEmitter();
   constructor() {}
 
   get isDirtyContol() {
@@ -39,6 +44,18 @@ export class TextboxComponent implements OnInit {
   }
   get isValidContol() {
     return this.form.controls[this.controlValues.name].valid;
+  }
+
+  onBlur(event){
+    console.log(event);
+  }
+
+  onChange(event){
+    console.log(event);
+  }
+
+  onFocus(event){
+    console.log(event);
   }
 
   ngOnInit() {
