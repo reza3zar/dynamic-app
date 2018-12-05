@@ -1,6 +1,6 @@
 {
-  "name": "dynamic-app",
-  "version": "0.0.0",
+  "name": "dynamic-app-ng",
+  "version": "1.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +9,20 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "author": {
+    "name": "Reza Younesi",
+    "email": "younesi.nima@gmail.com",
+    "url": "https://github.com/reza3zar"
+  },
+    "bugs": "https://github.com/reza3zar/dynamic-app/issues"
+    ,
+    "homepage": "https://github.com/reza3zar/dynamic-app"
+    ,
+    "description": "This project is a Dynamic Form Builder IN Angular"
+
+    ,"license": "MIT",
+
+  "private": false,
   "dependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
