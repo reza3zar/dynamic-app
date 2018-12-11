@@ -2,7 +2,7 @@ import { CustomControl } from "./../Common/control";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
-
+import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,9 +13,16 @@ export class EmployeeService {
   public getEmployeeCollection():Observable<CustomControl[]>{
     return this.http.get<CustomControl[]>("http://www.mocky.io/v2/5c0214313500006400ad0aba");
   }
+
+//   public getdata(){
+//     this.http.get('http://www.mocky.io/v2/5c0d270d2f00005b00e2e538')
+//     .pipe(
+//       map(ress => console.log(ress)) // or any other operator
+//     )
+//     .subscribe(res => { return res});
+// }
+
 }
-
-
 // [
 //   {
 //       "type": "text",

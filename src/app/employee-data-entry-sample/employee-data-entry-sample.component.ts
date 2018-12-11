@@ -18,7 +18,10 @@ export class EmployeeDataEntrySampleComponent implements OnInit, OnDestroy {
     this.usersService.getEmployeeCollection().subscribe(dataResult => {
       this._collectionControls = dataResult.sort((a, b) => a.order - b.order);
       this.pageIsload=true;
-    });
+    })
+
+    // var ssss=this.usersService.getdata();
+    // console.log(ssss)
   }
 
    ///To DO unSubscribe

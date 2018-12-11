@@ -1,7 +1,7 @@
 import { UserManagementService } from './Services/user-management.service';
 import { FormBuilderModule } from './control-builder/form-builder.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
  import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -11,6 +11,7 @@ import { UserDataEntrySampleComponent } from './user-data-entry-sample/user-data
 import { EmployeeDataEntrySampleComponent } from './employee-data-entry-sample/employee-data-entry-sample.component';
 import { EmployeeService } from './Services/employee.service';
 import { FakeLoaderComponent } from './fake-loader/fake-loader.component';
+import { GlobalErrorHandlerService } from './GlobalErrorHandlerService';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { FakeLoaderComponent } from './fake-loader/fake-loader.component';
 
 
   ],
-  providers: [UserManagementService,EmployeeService],
+  providers: [UserManagementService,EmployeeService,GlobalErrorHandlerService,
+    ,{ provide: ErrorHandler, useClass: GlobalErrorHandlerService },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
