@@ -14,14 +14,10 @@
     "email": "younesi.nima@gmail.com",
     "url": "https://github.com/reza3zar"
   },
-    "bugs": "https://github.com/reza3zar/dynamic-app/issues"
-    ,
-    "homepage": "https://github.com/reza3zar/dynamic-app"
-    ,
-    "description": "This project is a Dynamic Form Builder IN Angular"
-
-    ,"license": "MIT",
-
+  "bugs": "https://github.com/reza3zar/dynamic-app/issues",
+  "homepage": "https://github.com/reza3zar/dynamic-app",
+  "description": "This project is a Dynamic Form Builder IN Angular",
+  "license": "MIT",
   "private": false,
   "dependencies": {
     "@angular/animations": "^6.1.0",
@@ -36,6 +32,7 @@
     "@ng-bootstrap/ng-bootstrap": "^4.0.0",
     "bootstrap": "^4.1.3",
     "core-js": "^2.5.4",
+    "ng2-jalali-date-picker": "^2.2.7",
     "ngx-mask": "^7.0.1",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"

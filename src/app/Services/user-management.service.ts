@@ -11,7 +11,7 @@ export class UserManagementService {
   constructor(private http:HttpClient) { }
 
   public getUsersCollection():Observable<CustomControl[]>{
-    return this.http.get<CustomControl[]>("http://www.mocky.io/v2/5c0394f33000006300bb944c");
+    return this.http.get<CustomControl[]>("http://www.mocky.io/v2/5c16390a2e0000301737c751");
   }
 }
 

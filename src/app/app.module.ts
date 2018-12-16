@@ -25,8 +25,7 @@ import { GlobalErrorHandlerService } from './GlobalErrorHandlerService';
   ,FormBuilderModule
   ,HttpClientModule
   ,AppRoutingModule,
-  FormsModule,
-
+  FormsModule
 
   ],
   providers: [UserManagementService,EmployeeService,GlobalErrorHandlerService,

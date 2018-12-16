@@ -3,29 +3,37 @@ import { FormGroup } from "@angular/forms";
 import { CustomControl } from "../Common/control";
 
 @Component({
-  selector: "number",
+  selector: "datepeickerfa",
   template: `
     <div [formGroup]="form">
-      <input
-
-        class="form-control"
-        [id]="controlValues.id"
-        [name]="controlValues.name"
+      <dp-date-picker
+      class="form-control"
+      [id]="controlValues.id"
         [formControlName]="controlValues.name"
-        [placeholder]="controlValues.placeholder"
+        dir="rtl"
         [(ngModel)]="controlValues.value"
+        mode="day"
         [attr.required]="controlValues.required"
-        [pattern]="controlValues.pattern"
-        numbersOnly
-      />
+        ([placeholder])="controlValues.placeholder"
+        theme="dp-material">
+      </dp-date-picker>
     </div>
 
     <div class="row col-md-12">
-    <div class="alert alert-danger my-1 p-2 fadeInDown animated" *ngIf="!isValidContol && isDirtyContol && (controlValues.value?.length==0)">{{controlValues.label}} is required !!!</div>
+      <div
+        class="alert alert-danger my-1 p-2 fadeInDown animated"
+        *ngIf="
+          !isValidContol && isDirtyContol && controlValues.value?.length == 0
+        "
+      >
+        {{ controlValues.label }} is required !!!
+      </div>
     </div>
+
+
   `
 })
-export class NumericTextboxComponent implements OnInit {
+export class DatepickerfaComponent implements OnInit {
   @Input() form: FormGroup;
   @Input() controlValues: CustomControl = {};
   constructor() {}
@@ -37,8 +45,5 @@ export class NumericTextboxComponent implements OnInit {
     return this.form.controls[this.controlValues.name].valid;
   }
 
-  ngOnInit() {
-
-
-  }
+  ngOnInit() {}
 }

@@ -1,3 +1,4 @@
+import { DpDatePickerModule } from 'ng2-jalali-date-picker';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -15,6 +16,7 @@ import {NgxMaskModule} from 'ngx-mask'
 import { MaskTextboxComponent } from '../Controls/masktextbox.component';
 import { NumericTextboxComponent } from '../Controls/numerictextbox.component';
 import { NumberDirective } from './numbersOnly.directive';
+import { DatepickerfaComponent } from '../Controls/datepickerfa.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { NumberDirective } from './numbersOnly.directive';
     NgbModule.forRoot(),
     NgbPaginationModule,
     NgbAlertModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    DpDatePickerModule
   ],
   declarations: [
     FormsBuilder,
@@ -35,7 +38,9 @@ import { NumberDirective } from './numbersOnly.directive';
     RadioButtonComponent,
     MaskTextboxComponent,
     NumericTextboxComponent,
+    DatepickerfaComponent,
     NumberDirective
+
   ],
   exports:[
     FormsBuilder
