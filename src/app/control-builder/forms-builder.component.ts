@@ -14,7 +14,7 @@ import { CustomControl } from "../Common/control";
           *ngFor="let controlValue of controls"
           class="{{controlValue.class}}"
         >
-          <decider [inputControl]="controlValue" *ngIf="controlValue?.visible!==false" (contorlEventChanged)="evenChangeMethod($event)" [form]="form"></decider>
+          <decider [inputControl]="controlValue"   (contorlEventChanged)="evenChangeMethod($event)" [form]="form"></decider>
         </div>
       </div>
       <div class="form-row"></div>

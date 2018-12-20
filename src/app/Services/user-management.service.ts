@@ -12,7 +12,7 @@ export class UserManagementService {
   constructor(private http:HttpClient) { }
 
   public getUsersCollection():Observable<CustomControl[]>{
-    return this.http.get<CustomControl[]>("http://www.mocky.io/v2/5c1b7bab33000056007fd7f9");
+    return this.http.get<CustomControl[]>("http://www.mocky.io/v2/5c1bb7543300000b437fd966");
   }
   public getMaritalCollection():Observable<CustomControl[]>{
     return this.http.get<CustomControl[]>("http://www.mocky.io/v2/5c1b50753300005c007fd6c2");
