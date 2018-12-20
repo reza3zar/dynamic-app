@@ -47,15 +47,19 @@ export class FormsBuilder implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-
     let fieldsCtrls = {};
     for (let f of this.controls) {
 
+
         if (f.required)
-          fieldsCtrls[f.name] = new FormControl(
-            f.value || "",
-            [Validators.required,Validators.minLength(f.minLengthValidation)]
-          );
+      {
+        fieldsCtrls[f.name] = new FormControl(
+          f.value || "",
+          [Validators.required,Validators.minLength(f.minLengthValidation)]
+        );
+
+      }
+
         else
 
          fieldsCtrls[f.name] = new FormControl(f.value);
@@ -65,6 +69,8 @@ export class FormsBuilder implements OnInit, OnDestroy {
     }
 
     this.form = new FormGroup(fieldsCtrls);
+
+    console.log(this.form)
   }
   evenChangeMethod(value){
 
