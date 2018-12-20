@@ -42,7 +42,5 @@ export class TextboxComponent implements OnInit {
   }
 
   ngOnInit() {
-
-
   }
 }

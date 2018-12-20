@@ -1,5 +1,5 @@
 import { CustomControl } from './../../Common/control';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'decider',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DeciderComponent implements OnInit {
   @Input() inputControl:CustomControl;
   @Input() form:any;
+  @Output() contorlEventChanged = new EventEmitter();
 
   get isDirtyContol() {
     return this.form.controls[this.inputControl.name].dirty;
@@ -19,6 +20,12 @@ export class DeciderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  selectedItemChanged(value){
+
+
+    this.contorlEventChanged.emit(value);
+    // console.log(value);
   }
 
 }

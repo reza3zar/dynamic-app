@@ -7,7 +7,7 @@
     <textbox *ngSwitchCase="'text'"  [controlValues]="inputControl" [form]="form"></textbox>
     <textareas *ngSwitchCase="'textareas'"  [controlValues]="inputControl" [form]="form"></textareas>
     <money *ngSwitchCase="'money'"  [controlValues]="inputControl" [form]="form"></money>
-    <dropdown *ngSwitchCase="'dropdown'"  [controlValues]="inputControl" [form]="form"></dropdown>
+    <dropdown *ngSwitchCase="'dropdown'" (onSelectedItemChanged)="selectedItemChanged($event)"  [controlValues]="inputControl" [form]="form"></dropdown>
     <datepicker *ngSwitchCase="'datepicker'"  [controlValues]="inputControl" [form]="form"></datepicker>
     <radio *ngSwitchCase="'radio'"  [controlValues]="inputControl" [form]="form"></radio>
     <masktextbox *ngSwitchCase="'masktextbox'"  [controlValues]="inputControl" [form]="form"></masktextbox>

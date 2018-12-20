@@ -10,11 +10,11 @@ export class EmployeeService {
 
   constructor(private http:HttpClient) { }
 
-  public getEmployeeCollection():Observable<CustomControl[]>{
-    return this.http.get<CustomControl[]>("http://www.mocky.io/v2/5c0214313500006400ad0aba");
+  public getEmployeeCollection():Observable<any[]>{
+    return this.http.get<any[]>("http://www.mocky.io/v2/5c0214313500006400ad0aba");
   }
 
-//   public getdata(){
+//   public getdata(){http://www.mocky.io/v2/5c0214313500006400ad0aba
 //     this.http.get('http://www.mocky.io/v2/5c0d270d2f00005b00e2e538')
 //     .pipe(
 //       map(ress => console.log(ress)) // or any other operator

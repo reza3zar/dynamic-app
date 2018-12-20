@@ -8,11 +8,19 @@ import { HttpClient } from "@angular/common/http";
 })
 export class UserManagementService {
 
+
   constructor(private http:HttpClient) { }
 
   public getUsersCollection():Observable<CustomControl[]>{
-    return this.http.get<CustomControl[]>("http://www.mocky.io/v2/5c16390a2e0000301737c751");
+    return this.http.get<CustomControl[]>("http://www.mocky.io/v2/5c1b7bab33000056007fd7f9");
   }
+  public getMaritalCollection():Observable<CustomControl[]>{
+    return this.http.get<CustomControl[]>("http://www.mocky.io/v2/5c1b50753300005c007fd6c2");
+  }
+  public getCountryCollection():Observable<CustomControl[]>{
+    return this.http.get<CustomControl[]>("http://www.mocky.io/v2/5c1b7c6b33000053007fd802");
+  }
+
 }
 
 //https://www.mocky.io/

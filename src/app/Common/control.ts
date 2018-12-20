@@ -7,6 +7,7 @@ export class CustomControl{
   public type?:string;
   public placeholder?:string;
   public value?:any;
+  public visible?:boolean=true;
   public class?:string;
   public required?:string='';
   public minLengthValidation?:number;
@@ -16,4 +17,6 @@ export class CustomControl{
   public radiItems?:Item[];
   public maskText?:MaskText;
   public pattern?:string;
+
+
 }

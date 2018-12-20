@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, Input, OnInit, Output, EventEmitter, OnDestroy } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { CustomControl } from "../Common/control";
 
@@ -14,7 +14,7 @@ import { CustomControl } from "../Common/control";
           *ngFor="let controlValue of controls"
           class="{{controlValue.class}}"
         >
-          <decider [inputControl]="controlValue" [form]="form"></decider>
+          <decider [inputControl]="controlValue" *ngIf="controlValue?.visible!==false" (contorlEventChanged)="evenChangeMethod($event)" [form]="form"></decider>
         </div>
       </div>
       <div class="form-row"></div>
@@ -35,14 +35,19 @@ import { CustomControl } from "../Common/control";
     </form>
   `
 })
-export class FormsBuilder implements OnInit {
+export class FormsBuilder implements OnInit, OnDestroy {
+  ngOnDestroy(): void {
+    console.log('destroy...')
+  }
   @Output() onSubmitOccoured = new EventEmitter();
   @Input() controls: CustomControl[] = [];
+  @Output() contorlEventChanged = new EventEmitter();
   form: FormGroup;
   constructor() {}
 
   ngOnInit() {
-    console.log(this.controls);
+
+
     let fieldsCtrls = {};
     for (let f of this.controls) {
 
@@ -51,12 +56,20 @@ export class FormsBuilder implements OnInit {
             f.value || "",
             [Validators.required,Validators.minLength(f.minLengthValidation)]
           );
-        else fieldsCtrls[f.name] = new FormControl(f.value);
+        else
+
+         fieldsCtrls[f.name] = new FormControl(f.value);
 
         // fieldsCtrls[f.name] = new FormGroup(opts)
 
     }
-    console.log(fieldsCtrls);
+
     this.form = new FormGroup(fieldsCtrls);
   }
+  evenChangeMethod(value){
+
+    this.contorlEventChanged.emit(value);
+  }
+
+
 }

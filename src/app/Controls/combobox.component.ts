@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { FormGroup } from "@angular/forms";
 import { CustomControl } from "../Common/control";
 
@@ -6,8 +6,8 @@ import { CustomControl } from "../Common/control";
   selector: "dropdown",
   template: `
   <div [formGroup]="form">
-        <select class="form-control" [id]="controlValues.id" [formControlName]="controlValues.name">
-          <option *ngFor="let comboItem of controlValues.items" [value]="comboItem.value">{{comboItem.name}}</option>
+        <select class="form-control" [id]="controlValues.id" (change)="changeSelectedItem($event.target.value,this.controlValues)" [formControlName]="controlValues.name">
+          <option *ngFor="let comboItem of controlValues.items"  [value]="comboItem.value">{{comboItem.name}}</option>
         </select>
       </div>
   `
@@ -16,6 +16,7 @@ import { CustomControl } from "../Common/control";
 export class ComboBoxComponent implements OnInit {
   @Input() form: FormGroup;
   @Input() controlValues: CustomControl = {};
+  @Output() onSelectedItemChanged = new EventEmitter();
   constructor() {}
 
   get isDirtyContol() {
@@ -26,4 +27,12 @@ export class ComboBoxComponent implements OnInit {
   }
   ngOnInit() {
   }
+
+  changeSelectedItem(value,ctrlInfo){
+    this.onSelectedItemChanged.emit({
+      value,
+      ctrlInfo
+    });
+  }
+
 }
