@@ -285,6 +285,8 @@ in this form, you can inject your service.
 4.In form-builder, it use a iteration to read your structure and per element, it call Decider.
 
 5.Decider, make a decision to bind your element base on element type
- 
-![](https://cdn3.imggmi.com/uploads/2018/12/1/1454083aa3a4c5ce3fe7ce62814ec946-full.png)
+![](https://i.screenshot.net/166xyak)
+
+ Validation Sample:
+![](https://i.screenshot.net/eeeozt9)
  
