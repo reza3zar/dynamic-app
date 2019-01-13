@@ -22,9 +22,13 @@ export class UserDataEntrySampleComponent implements OnInit, OnDestroy {
   public showmartialCtrls=false;
   public operationBar:OperationBar=new OperationBar();
   ngOnInit() {
+    // this.operationBar.showOperationBar=this.operationBar.showSuccessBtn=this.operationBar.showCancelBtn=true;
+    // this.operationBar.successBtnTitle='استعلام جدید';
+    // this.operationBar.cancelBtnTitle='خروج';
+
     this.operationBar.showOperationBar=this.operationBar.showSuccessBtn=this.operationBar.showCancelBtn=true;
-    this.operationBar.successBtnTitle='استعلام جدید';
-    this.operationBar.cancelBtnTitle='خروج';
+    this.operationBar.successBtnTitle='Save Data';
+    this.operationBar.cancelBtnTitle='Cancel';
 
     this.usersService.getUsersCollection().subscribe(dataResult => {
       this.collectionControls = dataResult.sort((a, b) => a.order - b.order);
