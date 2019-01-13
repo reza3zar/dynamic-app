@@ -11,7 +11,7 @@ export class EmployeeService {
   constructor(private http:HttpClient) { }
 
   public getEmployeeCollection():Observable<any[]>{
-    return this.http.get<any[]>("http://www.mocky.io/v2/5c1ba11933000050007fd8e9");
+    return this.http.get<any[]>("http://172.16.56.77:10100/api/Inquiries/TaxPayerInfo/meta/10101511640");
   }
 
 //   public getdata(){http://www.mocky.io/v2/5c0214313500006400ad0aba

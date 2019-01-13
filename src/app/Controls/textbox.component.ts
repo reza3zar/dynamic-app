@@ -7,7 +7,7 @@ import { CustomControl } from "../Common/control";
   template: `
     <div [formGroup]="form">
       <input
-       [ngStyle]="{'display':controlValues.visible !== true ? 'none' : 'inline' }"
+       [ngStyle]="{'display':controlValues.visible==undefined || controlValues.visible == false ? 'none' : 'inline' }"
         [attr.type]="controlValues.type"
         class="form-control"
         [id]="controlValues.id"

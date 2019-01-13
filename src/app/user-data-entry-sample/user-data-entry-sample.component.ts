@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { UserManagementService } from '../Services/user-management.service';
 import { CustomControl } from '../Common/control';
+import { OperationBar } from '../Common/operationBar';
 
 @Component({
   selector: 'app-user-data-entry-sample',
@@ -19,10 +20,15 @@ export class UserDataEntrySampleComponent implements OnInit, OnDestroy {
   public countrydatacollection: CustomControl[] = [];
 
   public showmartialCtrls=false;
+  public operationBar:OperationBar=new OperationBar();
   ngOnInit() {
+    this.operationBar.showOperationBar=this.operationBar.showSuccessBtn=this.operationBar.showCancelBtn=true;
+    this.operationBar.successBtnTitle='استعلام جدید';
+    this.operationBar.cancelBtnTitle='خروج';
+
     this.usersService.getUsersCollection().subscribe(dataResult => {
       this.collectionControls = dataResult.sort((a, b) => a.order - b.order);
-      console.log(this.collectionControls)
+
       this.pageIsload=true;
     });
 
@@ -36,6 +42,19 @@ export class UserDataEntrySampleComponent implements OnInit, OnDestroy {
     });
 
 
+  }
+
+  doWork(dataResult){
+    console.log(dataResult)
+    for (let key of Object.keys(dataResult[0])) {
+      console.log(key)
+
+      let mealName = dataResult[0][key];
+      console.log(mealName)
+
+      this.collectionControls.push(mealName);
+    }
+    console.log(this.collectionControls)
   }
 
    ///To DO unSubscribe

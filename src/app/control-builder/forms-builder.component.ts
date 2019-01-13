@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter, OnDestroy } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { CustomControl } from "../Common/control";
+import { OperationBar } from "../Common/operationBar";
 
 @Component({
   selector: "forms-builder",
@@ -19,17 +20,17 @@ import { CustomControl } from "../Common/control";
       </div>
       <div class="form-row"></div>
 
-      <div class="col-md-12">
-        <button
+      <div class="col-md-12" *ngIf="operationBar?.showOperationBar">
+        <button *ngIf="operationBar?.showCancelBtn"
           style="margin:2px"
           type="submit"
           [disabled]="!form.valid"
-          class="btn btn-primary"
+          class="btn btn-success"
         >
-          Save Data... !
+          {{operationBar?.successBtnTitle}}
         </button>
-        <button style="margin:2px" class="btn btn-danger">
-          Oops,Cancel ME !
+        <button *ngIf="operationBar?.showCancelBtn" style="margin:2px" class="btn btn-danger">
+        {{operationBar?.cancelBtnTitle}}
         </button>
       </div>
     </form>
@@ -41,6 +42,7 @@ export class FormsBuilder implements OnInit, OnDestroy {
   }
   @Output() onSubmitOccoured = new EventEmitter();
   @Input() controls: CustomControl[] = [];
+  @Input() operationBar:OperationBar;
   @Output() contorlEventChanged = new EventEmitter();
   form: FormGroup;
   constructor() {}
